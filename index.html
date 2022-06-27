@@ -47,9 +47,12 @@
         <section class="hero">
          <div class="container">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="hero-btn">Заказать услугу</button>
+            <button type="button" class="hero-btn" data-modal-open>Заказать услугу</button>
          </div>
+
+
         </section>
+
 
         <section class="content">
             <div class="container">
@@ -88,11 +91,22 @@
             <h2 class="cards-title">Чем мы занимаемся</h2>
             <ul class="cards-list">
                 <li class="cards-list-item list"><img src="./images/goit-maket1.jpg" alt="Здесь должна быть картинка, но вы ее
-                не увидите" width="370" class="cards-list-img"/></li>
+                не увидите" width="370" class="cards-list-img"/>
+             <div class="animation-cards"><p class="animation-cards-text">Десктопные приложения</p>
+             </div>
+             </li>
                 <li class="cards-list-item list"><img src="./images/goit-maket2.jpg" alt="Здесь должна быть картинка, но вы ее
-                не увидите" width="370" class="cards-list-img" /></li>
+                не увидите" width="370" class="cards-list-img" />
+             <div class="animation-cards">
+                <p class="animation-cards-text">Мобильные приложения</p>
+             </div>
+              </li>
                 <li class="cards-list-item list"><img src="./images/goit-maket3.jpg" alt="Здесь должна быть картинка, но вы ее
-                не увидите" width="370" class="cards-list-img" /></li>
+                не увидите" width="370" class="cards-list-img" />
+                <div class="animation-cards">
+                    <p class="animation-cards-text">Дизайнерские решения</p>
+                </div>
+             </li>
             </ul>
             </div>
 
@@ -307,7 +321,13 @@
 
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal"><button type="button" class="btn-close" data-modal-close>
+            <svg class="modal-close" width="11" height="11"><use href="./images/symbol-defs1.svg#icon-Close-2"></use></svg>
+        </button></div>
+    </div>
 
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
