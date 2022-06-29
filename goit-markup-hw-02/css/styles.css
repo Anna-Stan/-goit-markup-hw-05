@@ -46,9 +46,11 @@ img {
 
 
 .header {
+    position: relative;
     padding-top: 24px;
     padding-bottom: 24px;
     border: 1px solid #ECECEC;
+   
 }
 
 
@@ -86,19 +88,16 @@ align-items: center;}
     margin-left: 50px;
 }
 
-.nav-list-link::after {
+.portfolio-after::after {
+    position: absolute;
     content: "";
-    width: 48px;
+    width: 78px;
     height: 4px;
     background-color: rgba(33, 150, 243, 1);
     border: 1px solid rgba(0, 0, 0, 1);
     display: block;
-    width: 100%;
-    margin-top: 28px;
-    opacity: 0;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+    bottom: 0;
+ }
 
 .nav-list-link:hover, .nav-list-link:focus {color: #2196F3;}
 
@@ -159,6 +158,7 @@ justify-content:center;
 
 .btn-item:not(:last-child) {margin-right: 8px;}
 
+
 .visually-title {position: absolute;
     white-space: nowrap;
     width: 1px;
@@ -181,9 +181,8 @@ justify-content:center;
     background-color: #F5F4FA;
     padding: 6px 22px 6px 22px;
     border: transparent;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-list-item:hover,.btn-list-item:focus
@@ -208,17 +207,17 @@ justify-content:center;
 }
 
 .animation-hero-text {position: absolute;
-    font-weight: 400;
+        font-weight: 400;
         font-size: 18px;
         line-height: 1.55;
         letter-spacing: 0.03em;
         color: #FFFFFF;
         background-color: rgba(33, 150, 243, 0.9);
         padding: 63px 24px 63px 24px;
+        height: 100%;
         top: 0;
-        opacity: 0;
         transform: translateY(100%);
-        transition: transform 1000ms linear;
+        transition: transform 250ms linear;
 }
 
 .hero-list-item:hover .animation-hero-text {opacity: 1;}
@@ -305,7 +304,7 @@ font-style: normal;}
 
 .container-flex {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 
